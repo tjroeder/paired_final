@@ -5,8 +5,8 @@ require_relative '../lib/vehicle'
 RSpec.describe Vehicle do 
   let(:vehicle) { Vehicle.new('2001', 'Honda', 'Civic') }
   let(:charlie) { Passenger.new({"name" => "Charlie", "age" => 18}) }
-  let(:jude) { Passenger.new({"name" => "Jude", "age" => 20}) }
-  let(:taylor) { Passenger.new({"name" => "Taylor", "age" => 12}) }
+  let(:jude)    { Passenger.new({"name" => "Jude", "age" => 20}) }
+  let(:taylor)  { Passenger.new({"name" => "Taylor", "age" => 12}) }
 
   describe '#initialize' do
     it 'exists' do
@@ -54,10 +54,4 @@ RSpec.describe Vehicle do
       expect(vehicle.num_adults).to eq(2)
     end
   end
-
-  # describe 'iteration 3' do
-  #   describe '#' do
-
-  #   end
-  # end
 end
