@@ -2,7 +2,9 @@ require_relative '../lib/passenger'
 
 RSpec.describe Passenger do 
   let(:charlie) { Passenger.new({"name" => "Charlie", "age" => 18}) }
-  let(:taylor) { Passenger.new({"name" => "Taylor", "age" => 12}) }
+  let(:taylor)  { Passenger.new({"name" => "Taylor", "age" => 12}) }
+  let(:viv)     { Passenger.new({"name" => "Viv", "age" => 17}) }
+  let(:liz)     { Passenger.new({"name" => "Liz", "age" => 30}) }
 
   describe '#initialize' do
     it 'exists' do
@@ -19,10 +21,12 @@ RSpec.describe Passenger do
   describe '#adult?' do
     it 'can not be an adult' do
       expect(taylor.adult?).to eq(false)
+      expect(viv.adult?).to eq(false)
     end
 
     it 'can be an adult?' do
       expect(charlie.adult?).to eq(true)
+      expect(liz.adult?).to eq(true)
     end
   end
 
